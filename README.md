@@ -14,10 +14,10 @@ Dentro de `src/hooks` en el archivo `useTable.ts` debemos configurar el link al 
 
 # En nuestra aplicación solo utilizaremos 
 
-´´´´
+```
 <QueryClientProvider client={queryClient}>
     <MyReacTable />
 </QueryClientProvider>
-´´´´
+```
 
 para mostrar nuestra tabla.
