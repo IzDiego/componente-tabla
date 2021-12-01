@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import React from "react";
 import MyReacTable from "./components/tableComponent/MyReacTable";
 import { QueryClient, QueryClientProvider } from "react-query";
