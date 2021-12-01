@@ -34,7 +34,7 @@ export default function PagosTable({
     prepareRow,
     page = [],
     pageOptions = [],
-    state: { pageIndex, pageSize },
+    state: { pageIndex },
   } = useTable(
     {
       columns,
