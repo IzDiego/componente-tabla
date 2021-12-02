@@ -1,8 +1,8 @@
 {
   "name": "componente-tabla",
-  "version": "0.1.3",
+  "version": "0.1.5",
   "description": "Componente para agregar una React-Table que reciba datos desde el api de pagos LCM",
-  "dependencies": {
+  "peerDependencies": {
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mui/material": "^5.2.1",
