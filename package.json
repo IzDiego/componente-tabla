@@ -1,6 +1,6 @@
 {
   "name": "componente-tabla",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Componente para agregar una React-Table que reciba datos desde el api de pagos LCM",
   "dependencies": {
     "@types/react-table": "^7.7.8"
@@ -25,7 +25,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "tsc":"tsc"
+    "tsc": "tsc"
   },
   "eslintConfig": {
     "extends": [
@@ -53,5 +53,5 @@
   "main": "/src/index.js",
   "files": [
     "lib/**/*"
-]
+  ]
 }
