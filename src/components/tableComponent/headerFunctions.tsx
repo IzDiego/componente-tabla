@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useState } from "react";
+import React from "react";
 
 export default function cambiaStatus() {
   const [status, setStatus] = useState("Tenemos el dinero");
