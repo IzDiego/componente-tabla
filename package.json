@@ -1,6 +1,7 @@
 {
   "name": "componente-tabla",
-  "version": "0.1.8",
+  "version": "1.0.0",
+  "license": "MIT",
   "description": "Componente para agregar una React-Table que reciba datos desde el api de pagos LCM",
   "dependencies": {
     "@types/react-table": "^7.7.8"
