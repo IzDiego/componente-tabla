@@ -3,10 +3,13 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import payload from "./payload";
+import {headers} from "./components/tableComponent/datos/headers"
+import "./server";
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App headers={headers} payload={payload} />
   </React.StrictMode>,
   document.getElementById("root")
 );
