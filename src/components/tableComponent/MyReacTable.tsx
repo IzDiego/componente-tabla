@@ -5,18 +5,18 @@ import { useState, useMemo } from "react";
 import TableComponent from "./TableComponent";
 import useTable from "../../hooks/useTable";
 import CircularProgress from "@mui/material/CircularProgress";
-import Grid from '@mui/material/Grid';
+import Grid from "@mui/material/Grid";
 
-export default function MyReacTable(headers:any, payload: FormData):any {
+export default function MyReacTable(headers: any, payload: FormData): any {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(5);
   const skips: any = (page - 1) * perPage;
-  console.log('payload');
-  var value = payload.getAll('pagos[listado][columnas][]');
+  console.log("payload");
+  var value = payload.getAll("pagos[listado][columnas][]");
   console.log(value);
-  console.log('headers');
-console.log(headers);
-console.log('fin');
+  console.log("headers");
+  console.log(headers);
+  console.log("fin");
   let { data, isLoading, error, isSuccess } = useTable(skips, perPage, payload);
   var lista: any = {};
   if (isSuccess) {
@@ -41,8 +41,8 @@ console.log('fin');
   if (isSuccess) {
     return (
       <div>
-          <p>Success</p>
-          {/* <TableComponent
+        <p>Success</p>
+        {/* <TableComponent
             data={pagosMemo}
             columns={columns}
             setPage={setPage}

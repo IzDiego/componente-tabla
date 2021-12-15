@@ -1,5 +1,5 @@
 {
-  "name": "@lcmconsultoria/table",
+  "name": "pruebastable",
   "version": "0.0.1",
   "license": "MIT",
   "description": "Componente para agregar una React-Table que reciba datos desde el api de pagos LCM",
