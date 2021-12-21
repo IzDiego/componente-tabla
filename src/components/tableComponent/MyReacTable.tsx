@@ -7,28 +7,19 @@ import useTable from "../../hooks/useTable";
 import CircularProgress from "@mui/material/CircularProgress";
 import Grid from "@mui/material/Grid";
 
-export default function MyReacTable(headers: any, payload: FormData): any {
+export default function MyReacTable(props: { payload: any; headers: any; }): any {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState(5);
   const skips: any = (page - 1) * perPage;
-  console.log("payload");
-  var value = payload.getAll("pagos[listado][columnas][]");
-  console.log(value);
-  console.log("headers");
-  console.log(headers);
-  console.log("fin");
-  let { data, isLoading, error, isSuccess } = useTable(skips, perPage, payload);
-  var lista: any = {};
-  if (isSuccess) {
-    lista = data;
-  }
+  let { data, isLoading, error, isSuccess } = useTable(skips, perPage, props.payload);
   var pagos: any = {};
-  pagos = lista.misDatos;
-  var contador: any = {};
-  contador = lista.contador;
-
-  /* const columns = useMemo(() => headers, [headers]);
-  const pagosMemo: any = useMemo(() => pagos, [pagos]); */
+  var registros:number = 0;
+  if (isSuccess) {
+    pagos = data.data;
+    registros = data.recordsFiltered;
+  }  
+  const columns = useMemo(() => props.headers, [props.headers]);
+  const pagosMemo: any = useMemo(() => pagos, [pagos]);
 
   if (error) {
     return <p>Error al obtener los datos</p>;
@@ -41,16 +32,15 @@ export default function MyReacTable(headers: any, payload: FormData): any {
   if (isSuccess) {
     return (
       <div>
-        <p>Success</p>
-        {/* <TableComponent
+        <TableComponent
             data={pagosMemo}
             columns={columns}
             setPage={setPage}
             setPerPage={setPerPage}
             currentpage={page}
-            perPage={perPage}s
-            totalPage={contador}
-          /> */}
+            perPage={perPage}
+            totalPage={registros}
+          />
       </div>
     );
   }
